@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+/* NAVBAR */
+.nav-item {
+  font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  background-color: crimson;
+  color: white;
+  height: 100px;
+  margin-bottom: 0;
+}
+
+footer .container {
+  text-align: center;
+}
+
+.footer-info {
+  padding-top: 10px;
+}
+
+.footer-info p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.socmed-icon {
+  font-size: 20px;
+}
+
+.socmed-icon a {
+  text-decoration: none;
+  margin: 15px 20px;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  /* NAVBAR */
+  .nav-link {
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 60px;
+  }
+
+  footer .container {
+    text-align: left;
+  }
+
+  .footer-info {
+    float: left;
+  }
+
+  .socmed-icon {
+    float: right;
+    margin-top: 5px;
+  }
+}

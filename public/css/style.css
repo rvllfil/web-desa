@@ -11,7 +11,7 @@
 footer {
   background-color: crimson;
   color: white;
-  height: 100px;
+  height: 120px;
   margin-bottom: 0;
 }
 
@@ -26,10 +26,12 @@ footer .container {
 .footer-info p {
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-top: 0px;
 }
 
 .socmed-icon {
-  font-size: 20px;
+  font-size: 18px;
+
 }
 
 .socmed-icon a {
@@ -40,14 +42,23 @@ footer .container {
 
 @media (min-width: 992px) {
   /* NAVBAR */
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+  }
+
   .nav-link {
     text-transform: uppercase;
     margin-right: 20px;
+    font-size: 12px;
   }
 
   /* FOOTER */
   footer {
-    height: 60px;
+    margin-top: 50px;
+    height: 70px;
   }
 
   footer .container {
@@ -56,10 +67,12 @@ footer .container {
 
   .footer-info {
     float: left;
+    font-size: 12px;
+    padding-top: 10px;
   }
 
   .socmed-icon {
     float: right;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }

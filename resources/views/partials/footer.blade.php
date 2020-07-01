@@ -1,8 +1,9 @@
 <footer>
   <div class="container">
     <div class="footer-info">
-      <p><span class="fa fa-copyright"></span>Pemeritah Desa Cibatu 2020</p>
+      <p><span class="fa fa-copyright"></span> 2020 Pemeritah Desa Cibatu</p>
       <p>Dikembangkan oleh @rvllfil</p>
+      <p>Didesain oleh @pixreddd</p>
     </div>
     <div class="socmed-icon">
       <a href="" class="fa fa-facebook"></a>

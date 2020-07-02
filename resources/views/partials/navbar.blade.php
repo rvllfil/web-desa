@@ -12,9 +12,9 @@
             Tentang
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Visi & Misi</a>
-            <a class="dropdown-item" href="#">Wilayah</a>
-            <a class="dropdown-item" href="#">Sejarah</a>
+            <a class="dropdown-item" href="/visi-misi">Visi & Misi</a>
+            <a class="dropdown-item" href="/wilayah">Wilayah</a>
+            <a class="dropdown-item" href="/sejarah">Sejarah</a>
           </div>
         </li>
         <li class="nav-item dropdown">

@@ -7,6 +7,36 @@
   font-weight: 700;
 }
 
+/* JUMBOTRON */
+.jumbotron {
+  height: 140px;
+  background-size: cover;
+  position: relative;
+}
+
+.jumbotron::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(194, 0, 41, 0.7) ;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.jumbotron .display-4 {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  position: relative;
+  z-index: 2;
+}
+
 /* FOOTER */
 footer {
   background-color: crimson;
@@ -40,6 +70,23 @@ footer .container {
   color: white;
 }
 
+@media (min-width: 576px) {
+  .jumbotron .display-4{
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    height: 200px;
+  }
+  
+  .jumbotron .display-4 {
+    margin-top: 10px;
+  }
+
+}
+
 @media (min-width: 992px) {
   /* NAVBAR */
   .navbar {
@@ -54,6 +101,16 @@ footer .container {
     margin-right: 20px;
     font-size: 12px;
   }
+
+  /* JUMBOTRON */
+  .jumbotron {
+    height: 240px;
+  }
+
+  .jumbotron .display-4 {
+    margin-top: 60px;
+  }
+
 
   /* FOOTER */
   footer {

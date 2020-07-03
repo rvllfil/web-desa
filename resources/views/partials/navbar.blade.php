@@ -22,11 +22,11 @@
             Lembaga
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Aparat Desa</a>
-            <a class="dropdown-item" href="#">BPD</a>
-            <a class="dropdown-item" href="#">LPM</a>
-            <a class="dropdown-item" href="#">PKK</a>
-            <a class="dropdown-item" href="#">Karang Taruna</a>
+            <a class="dropdown-item" href="/pemerintah-desa">Aparat Desa</a>
+            <a class="dropdown-item" href="/bpd">BPD</a>
+            <a class="dropdown-item" href="/lpm">LPM</a>
+            <a class="dropdown-item" href="/pkk">PKK</a>
+            <a class="dropdown-item" href="/karang-taruna">Karang Taruna</a>
           </div>
         </li>
         <li class="nav-item">

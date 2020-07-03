@@ -37,4 +37,50 @@ class PageController extends Controller
         );
         return view('pages.wilayah')->with($data);
     }
+
+    public function pd() 
+    {
+        $data = array(
+            'title' => 'Aparat Desa',
+            'jumbotronImage' => 'img/pd.png'
+        );
+        return view('pages.page')->with($data);
+    }
+
+    public function bpd() 
+    {
+        $data = array(
+            'title' => 'BPD',
+            'jumbotronImage' => 'img/bpd.png'
+        );
+        return view('pages.page')->with($data);
+    }
+
+    public function lpm() 
+    {
+        $data = array(
+            'title' => 'LPM',
+            'jumbotronImage' => 'img/lpm.jpg'
+        );
+        return view('pages.page')->with($data);
+    }
+
+    public function pkk() 
+    {
+        $data = array(
+            'title' => 'PKK',
+            'jumbotronImage' => 'img/pkk.jpeg'
+        );
+        return view('pages.page')->with($data);
+    }
+
+    public function kt() 
+    {
+        $data = array(
+            'title' => 'Karang Taruna',
+            'jumbotronImage' => 'img/kt.jpg'
+        );
+        return view('pages.page')->with($data);
+    }
+    
 }

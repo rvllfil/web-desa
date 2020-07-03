@@ -18,3 +18,10 @@ Route::get('/visi-misi', 'PageController@visimisi');
 Route::get('/sejarah', 'PageController@sejarah');
 Route::get('/wilayah', 'PageController@wilayah');
 
+Route::get('/pemerintah-desa', 'PageController@pd');
+Route::get('/bpd', 'PageController@bpd');
+Route::get('/lpm', 'PageController@lpm');
+Route::get('/pkk', 'PageController@pkk');
+Route::get('/karang-taruna', 'PageController@kt');
+
+

@@ -30,13 +30,13 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Transparansi</a>
+          <a class="nav-link" href="/transparansi">Transparansi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Kabar Desa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Kontak</a>
+          <a class="nav-link" href="/kontak">Kontak</a>
         </li>
       </ul>
     </div>

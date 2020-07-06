@@ -83,4 +83,19 @@ class PageController extends Controller
         return view('pages.page')->with($data);
     }
     
+    public function transparansi() 
+    {
+        $data = array(
+            'title' => 'Transparansi',
+        );
+        return view('pages.page')->with($data);
+    }
+
+    public function kontak() 
+    {
+        $data = array(
+            'title' => 'Kontak',
+        );
+        return view('pages.pagewoj')->with($data);
+    }
 }

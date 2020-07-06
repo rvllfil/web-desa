@@ -24,4 +24,8 @@ Route::get('/lpm', 'PageController@lpm');
 Route::get('/pkk', 'PageController@pkk');
 Route::get('/karang-taruna', 'PageController@kt');
 
+Route::get('/transparansi', 'PageController@transparansi');
+Route::get('/kontak', 'PageController@kontak');
 
+// ADMIN
+Route::get('/admin', 'AdminController@adminpage');

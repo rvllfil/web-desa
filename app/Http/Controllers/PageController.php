@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class PageController extends Controller 
 {
     
@@ -40,8 +40,11 @@ class PageController extends Controller
 
     public function pd() 
     {
+        $database = DB::table('lembagas')->where('id', 1)->first();
         $data = array(
-            'title' => 'Aparat Desa',
+            'title' => $database->nama,
+            'deskripsi' => $database->deskripsi,
+            'gambar' => $database->gambar,
             'jumbotronImage' => 'img/pd.png'
         );
         return view('pages.page')->with($data);
@@ -49,8 +52,11 @@ class PageController extends Controller
 
     public function bpd() 
     {
+        $database = DB::table('lembagas')->where('id', 2)->first();
         $data = array(
-            'title' => 'BPD',
+            'title' => $database->nama,
+            'deskripsi' => $database->deskripsi,
+            'gambar' => $database->gambar,
             'jumbotronImage' => 'img/bpd.png'
         );
         return view('pages.page')->with($data);
@@ -58,8 +64,11 @@ class PageController extends Controller
 
     public function lpm() 
     {
+        $database = DB::table('lembagas')->where('id', 3)->first();
         $data = array(
-            'title' => 'LPM',
+            'title' => $database->nama,
+            'deskripsi' => $database->deskripsi,
+            'gambar' => $database->gambar,
             'jumbotronImage' => 'img/lpm.jpg'
         );
         return view('pages.page')->with($data);
@@ -67,8 +76,11 @@ class PageController extends Controller
 
     public function pkk() 
     {
+        $database = DB::table('lembagas')->where('id', 4)->first();
         $data = array(
-            'title' => 'PKK',
+            'title' => $database->nama,
+            'deskripsi' => $database->deskripsi,
+            'gambar' => $database->gambar,
             'jumbotronImage' => 'img/pkk.jpeg'
         );
         return view('pages.page')->with($data);
@@ -76,8 +88,11 @@ class PageController extends Controller
 
     public function kt() 
     {
+        $database = DB::table('lembagas')->where('id', 5)->first();
         $data = array(
-            'title' => 'Karang Taruna',
+            'title' => $database->nama,
+            'deskripsi' => $database->deskripsi,
+            'gambar' => $database->gambar,
             'jumbotronImage' => 'img/kt.jpg'
         );
         return view('pages.page')->with($data);

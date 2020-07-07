@@ -29,3 +29,9 @@ Route::get('/kontak', 'PageController@kontak');
 
 // ADMIN
 Route::get('/admin', 'AdminController@adminpage');
+Route::get('/admin/pd', 'AdminController@pd');
+Route::get('/admin/bpd', 'AdminController@bpd');
+Route::get('/admin/lpm', 'AdminController@lpm');
+Route::get('/admin/pkk', 'AdminController@pkk');
+Route::get('/admin/kt', 'AdminController@kt');
+Route::patch('/lembagas/{id}', 'AdminController@editProses');

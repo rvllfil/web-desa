@@ -37,3 +37,6 @@ Route::get('/admin/kt', 'AdminController@kt');
 Route::patch('/lembagas/{id}', 'AdminController@editProses');
 
 Route::resource('/admin/posts', 'PostsController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

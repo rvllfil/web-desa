@@ -69,10 +69,21 @@ class AdminController extends Controller
 
     public function editProses(Request $request, $id)
     {
+        $this->validate($request, [
+            'deskripsi' => 'required',
+            'gambar' => 'required'
+        ]);
+
+        $gambar = $request->gambar;
+        $new_gambar = time().$gambar->getClientOriginalName();
+
         DB::table('lembagas')->where('id', $id)
             ->update([
-                'deskripsi' => $request->deskripsi
+                'deskripsi' => $request->deskripsi,
+                'gambar' => 'uploads/bagan/'.$new_gambar
             ]);
+        
+        $gambar->move('uploads/bagan/', $new_gambar);
         return back()->with('status', 'Data berhasil diubah!');
     }
 }

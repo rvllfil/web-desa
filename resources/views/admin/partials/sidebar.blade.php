@@ -32,15 +32,8 @@
         </li>
           
         <h3 class="menu-title">Kabar Desa</h3><!-- /.menu-title -->
-        <li class="menu-item-has-children dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Icons</a>
-            <ul class="sub-menu children dropdown-menu">
-                <li><i class="menu-icon fa fa-fort-awesome"></i><a href="font-fontawesome.html">Font Awesome</a></li>
-                <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy Icons</a></li>
-            </ul>
-        </li>
         <li>
-            <a href="widgets.html"> <i class="menu-icon ti-email"></i>Widgets </a>
+          <a href="{{ url('admin/posts') }}"> <i class="menu-icon ti-email"></i>Posts</a>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

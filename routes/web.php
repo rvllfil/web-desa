@@ -35,3 +35,5 @@ Route::get('/admin/lpm', 'AdminController@lpm');
 Route::get('/admin/pkk', 'AdminController@pkk');
 Route::get('/admin/kt', 'AdminController@kt');
 Route::patch('/lembagas/{id}', 'AdminController@editProses');
+
+Route::resource('/admin/posts', 'PostsController');

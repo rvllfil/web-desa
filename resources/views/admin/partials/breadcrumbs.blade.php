@@ -6,13 +6,13 @@
           </div>
       </div>
   </div>
-  {{-- <div class="col-sm-8">
+  <div class="col-sm-8">
       <div class="page-header float-right">
           <div class="page-title">
               <ol class="breadcrumb text-right">
-                  <li class="active">Dashboard</li>
+                  <li class="active">Lembaga / {{ $title ?? '' }}</li>
               </ol>
           </div>
       </div>
-  </div> --}}
+  </div>
 </div>

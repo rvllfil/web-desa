@@ -47,7 +47,7 @@ class PageController extends Controller
             'gambar' => $database->gambar,
             'jumbotronImage' => 'img/pd.png'
         );
-        return view('pages.page')->with($data);
+        return view('pages.lembaga')->with($data);
     }
 
     public function bpd() 
@@ -59,7 +59,7 @@ class PageController extends Controller
             'gambar' => $database->gambar,
             'jumbotronImage' => 'img/bpd.png'
         );
-        return view('pages.page')->with($data);
+        return view('pages.lembaga')->with($data);
     }
 
     public function lpm() 
@@ -71,7 +71,7 @@ class PageController extends Controller
             'gambar' => $database->gambar,
             'jumbotronImage' => 'img/lpm.jpg'
         );
-        return view('pages.page')->with($data);
+        return view('pages.lembaga')->with($data);
     }
 
     public function pkk() 
@@ -83,7 +83,7 @@ class PageController extends Controller
             'gambar' => $database->gambar,
             'jumbotronImage' => 'img/pkk.jpeg'
         );
-        return view('pages.page')->with($data);
+        return view('pages.lembaga')->with($data);
     }
 
     public function kt() 
@@ -95,7 +95,7 @@ class PageController extends Controller
             'gambar' => $database->gambar,
             'jumbotronImage' => 'img/kt.jpg'
         );
-        return view('pages.page')->with($data);
+        return view('pages.lembaga')->with($data);
     }
     
     public function transparansi() 

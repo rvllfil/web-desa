@@ -1,5 +1,13 @@
 @extends('admin.layouts.adminapp')
 
+
+@section('breadcrumbs')
+{{-- Breadcrumbs --}}
+@include('admin.partials.breadcrumbs')
+{{-- /Breadcrumbs --}}
+@endsection
+
+
 @section('content')
 
 @include('admin.partials.edit')

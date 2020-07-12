@@ -28,7 +28,7 @@
             </ul>
         </li>
         <li>
-            <a href="widgets.html"> <i class="menu-icon ti-email"></i>Transparansi </a>
+            <a href="{{ route('transparansi.index') }}"> <i class="menu-icon ti-email"></i>Transparansi </a>
         </li>
           
         <h3 class="menu-title">Kabar Desa</h3><!-- /.menu-title -->

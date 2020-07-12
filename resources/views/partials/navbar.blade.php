@@ -33,7 +33,7 @@
           <a class="nav-link" href="/transparansi">Transparansi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Kabar Desa</a>
+          <a class="nav-link" href="/kabar-desa">Kabar Desa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/kontak">Kontak</a>

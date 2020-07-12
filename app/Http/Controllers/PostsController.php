@@ -19,8 +19,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $post = Posts::paginate(10);
-        return view('admin.posts', compact('post'));
+        $posts = Posts::orderBy('created_at', 'desc')->paginate(9);
+        return view('admin.posts', compact('posts'));
     }
 
     /**
@@ -62,15 +62,41 @@ class PostsController extends Controller
         return redirect()->route('posts.index')->with('status', 'Postingan anda berhasil dibuat!');
     }
 
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function all()
+    {
+        $posts = Posts::orderBy('created_at', 'desc')->paginate(9);
+        return view('posts', compact('posts'));
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function search()
+    {
+        $query = request('query');
+        $posts = Posts::where("judul", "like", "%$query%")->orWhere("content", "like", "%$query%")->latest()->paginate(10);
+        return view('posts', compact('posts'));
+    }
+
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Posts $post)
     {
-        //
+        return view('post', compact('post'));
     }
 
     /**

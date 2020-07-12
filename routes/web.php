@@ -15,30 +15,38 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'PageController@home');
-Route::get('/visi-misi', 'PageController@visimisi');
-Route::get('/sejarah', 'PageController@sejarah');
-Route::get('/wilayah', 'PageController@wilayah');
+Route::get('visi-misi', 'PageController@visimisi');
+Route::get('sejarah', 'PageController@sejarah');
+Route::get('wilayah', 'PageController@wilayah');
 
-Route::get('/pemerintah-desa', 'PageController@pd');
-Route::get('/bpd', 'PageController@bpd');
-Route::get('/lpm', 'PageController@lpm');
-Route::get('/pkk', 'PageController@pkk');
-Route::get('/karang-taruna', 'PageController@kt');
+Route::get('pemerintah-desa', 'PageController@pd');
+Route::get('bpd', 'PageController@bpd');
+Route::get('lpm', 'PageController@lpm');
+Route::get('pkk', 'PageController@pkk');
+Route::get('karang-taruna', 'PageController@kt');
 
-Route::get('/transparansi', 'PageController@transparansi');
-Route::get('/kontak', 'PageController@kontak');
+// Route::get('transparansi', 'PageController@transparansi');
+Route::get('kontak', 'PageController@kontak');
+
+Route::get('kabar-desa/search', 'PostsController@search' )->name('search.posts');
+Route::get('kabar-desa', 'PostsController@all');
+Route::get('kabar-desa/{post:slug}', 'PostsController@show')->name('posts.post');
+
+Route::get('transparansi', 'TransparansiController@show');
+
 
 // ADMIN
 Route::group(['middleware' => 'auth'], function() {
-  Route::get('/admin', 'AdminController@adminpage');
-  Route::get('/admin/pd', 'AdminController@pd');
-  Route::get('/admin/bpd', 'AdminController@bpd');
-  Route::get('/admin/lpm', 'AdminController@lpm');
-  Route::get('/admin/pkk', 'AdminController@pkk');
-  Route::get('/admin/kt', 'AdminController@kt');
-  Route::patch('/lembagas/{id}', 'AdminController@editProses');
-  Route::resource('/admin/posts', 'PostsController');
-  Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('admin', 'AdminController@adminpage');
+  Route::get('admin/pd', 'AdminController@pd');
+  Route::get('admin/bpd', 'AdminController@bpd');
+  Route::get('admin/lpm', 'AdminController@lpm');
+  Route::get('admin/pkk', 'AdminController@pkk');
+  Route::get('admin/kt', 'AdminController@kt');
+  Route::patch('lembagas/{id}', 'AdminController@editProses');
+  Route::resource('admin/posts', 'PostsController');
+  Route::get('home', 'HomeController@index')->name('home');
+  Route::resource('admin/transparansi', 'TransparansiController');
 });
 
 

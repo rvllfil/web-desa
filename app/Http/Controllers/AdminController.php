@@ -86,4 +86,5 @@ class AdminController extends Controller
         $gambar->move('uploads/bagan/', $new_gambar);
         return back()->with('status', 'Data berhasil diubah!');
     }
+
 }

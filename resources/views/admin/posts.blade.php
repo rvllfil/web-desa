@@ -57,20 +57,21 @@
   </p>
 
   <div class="row">
-      <div class="card-group">
-        @foreach($post as $result => $hasil)
+
+        @foreach($posts as $post)
+
         <div class="col-md-6 col-lg-4">
           <div class="card">
-            <img class="card-img-top" src="{{ asset($hasil->thumbnail) }}" alt="Card image cap">
+            <img class="card-img-top" src="{{ asset($post->thumbnail) }}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{ $hasil->judul }}</h5>
-              <p class="card-text">{{ Str::limit($hasil->content , 20) }}</p>
+              <h5 class="card-title">{{ $post->judul }}</h5>
+              <p class="card-text">{!! Str::limit($post->content , 100) !!}</p>
             </div>
             <div class="card-footer">
-                <form action="{{ route('posts.destroy', $hasil->id) }}" method="POST" class="delete">
+                <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="delete">
                   @csrf
                   @method('delete')
-                  <a href="{{ route('posts.edit', $hasil->id) }}" class="btn btn-primary"><span class="fa fa-pencil"></span> Edit</a>                
+                  <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary"><span class="fa fa-pencil"></span> Edit</a>                
                   <button type="submit" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Postingan Ini?')">
                     <span class="fa fa-trash"></span> Hapus
                   </button>
@@ -78,8 +79,16 @@
             </div>
           </div>
         </div>
+
         @endforeach
+
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div>
+      {{ $posts->links() }}
     </div>
   </div>
+
 </div>
 @endsection

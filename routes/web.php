@@ -30,7 +30,8 @@ Route::get('kontak', 'PageController@kontak');
 
 Route::get('kabar-desa/search', 'PostsController@search' )->name('search.posts');
 Route::get('kabar-desa', 'PostsController@all');
-Route::get('kabar-desa/{post:slug}', 'PostsController@show')->name('posts.post');
+Route::get('kabar-desa/{slug}', 'PostsController@show')->name('posts.post');
+Route::post('/comments', 'PostsController@comment');
 
 Route::get('transparansi', 'TransparansiController@show');
 

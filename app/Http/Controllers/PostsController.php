@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 
 
 use App\Posts;
+use App\Comments;
 
 
 class PostsController extends Controller
@@ -94,8 +95,9 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Posts $post)
+    public function show($slug)
     {
+        $post = Posts::with(['comments', 'comments.child'])->where('slug', $slug)->first();
         return view('post', compact('post'));
     }
 
@@ -168,4 +170,24 @@ class PostsController extends Controller
 
         return redirect()->route('posts.index')->with('status', 'Postingan anda berhasil dihapus!');
     }
+
+    public function comment(Request $request)
+{
+    //VALIDASI DATA YANG DITERIMA
+    $this->validate($request, [
+        'username' => 'required',
+        'email' => 'required',
+        'comment' => 'required'
+    ]);
+
+    Comments::create([
+        'posts_id' => $request->id,
+        //JIKA PARENT ID TIDAK KOSONG, MAKA AKAN DISIMPAN IDNYA, SELAIN ITU NULL
+        'parent_id' => $request->parent_id != '' ? $request->parent_id:NULL,
+        'username' => $request->username,
+        'email' => $request->email,
+        'comment' => $request->comment
+    ]);
+    return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
+}
 }

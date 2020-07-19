@@ -2,6 +2,13 @@
 
 @section('style')
   <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+  <style>
+    .card img {
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+  </style>
 @endsection
 
 @section('title', 'Cibatu')
@@ -36,43 +43,23 @@
 
 <div class="news">
   <div class="container">
-    <h2> <span class="far fa-newspaper" style="color: crimson;"></span> Kabar Desa</h2>
+    <h2> <span class="far fa-newspaper" style="color: crimson;"></span> Kabar Desa Terbaru</h2>
     <div class="row row-cols-1 row-cols-md-2">
+
+      @foreach ($posts as $post)
+
       <div class="col mb-4">
         <div class="card h-100">
-          <img src="{{ asset('img/news/news1.png') }}" class="card-img-top" alt="">
+          <img src="{{ asset( $post->thumbnail ) }}" class="card-img-top" alt="">
           <div class="card-body">
-            <h5 class="card-title">Turnamen Cibatu Cup 2020</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. <span>baca selengkapnya...</span></p>
+            <h5 class="card-title">{{ Str::limit($post->judul , 50) }}</h5>
+            <p class="card-text"> {!! Str::limit($post->content , 100, '.') !!} <span>baca selengkapnya...</span></p>
           </div>
         </div>
       </div>
-      <div class="col mb-4">
-        <div class="card h-100">
-          <img src="{{ asset('img/news/news2.png') }}" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Golok Cibatu Menembus Pasar Internasiaonal</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. <span>baca selengkapnya...</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card h-100">
-          <img src="{{ asset('img/news/news3.png') }}" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Bantuan pada Gapoktan Desa Cibatu</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. <span>baca selengkapnya...</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card h-100">
-          <img src="{{ asset('img/news/news4.png') }}" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Perbaikan Jalan di beberapa RT di desa Cibatu</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. <span>baca selengkapnya...</span></p>
-          </div> 
-        </div>
+
+      @endforeach
+      
       </div>
     </div>
   </div>

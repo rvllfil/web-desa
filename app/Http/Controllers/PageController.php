@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Posts;
 class PageController extends Controller 
 {
     
     public function home() 
     {
-        return view('pages.homepage');
+        $posts = Posts::orderBy('created_at', 'desc')->paginate(4);
+        return view('pages.homepage', compact('posts'));
     }
 
     public function visimisi() 
@@ -18,7 +20,7 @@ class PageController extends Controller
             'title' => 'Visi & Misi',
             'jumbotronImage' => 'img/visimisi.jpg'
         );
-        return view('pages.page')->with($data);
+        return view('pages.visimisi')->with($data);
     }
 
     public function sejarah() 

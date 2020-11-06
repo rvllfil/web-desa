@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('style')
-  <link rel="stylesheet" href="{{ secure_asset('css/homepage.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
   <style>
     .card img {
         height: 300px;

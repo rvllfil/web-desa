@@ -35,6 +35,10 @@ Route::post('/comments', 'PostsController@comment');
 
 Route::get('transparansi', 'TransparansiController@show');
 
+Route::get('layanan', 'ServiceController@create');
+Route::get('layanan/store', 'ServiceController@store');
+
+
 
 // ADMIN
 Route::group(['middleware' => 'auth'], function() {
@@ -48,6 +52,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::resource('admin/posts', 'PostsController');
   Route::get('home', 'HomeController@index')->name('home');
   Route::resource('admin/transparansi', 'TransparansiController');
+  Route::resource('admin/layanan', 'ServiceController');
 });
 
 

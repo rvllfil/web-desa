@@ -16,7 +16,7 @@
             <a href=""> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
         </li>
 
-        <h3 class="menu-title">Page Editor</h3><!-- /.menu-title -->
+        <h3 class="menu-title">Admin</h3><!-- /.menu-title -->
         <li class="menu-item-has-children dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Lembaga</a>
             <ul class="sub-menu children dropdown-menu">
@@ -30,6 +30,9 @@
         <li>
             <a href="{{ route('transparansi.index') }}"> <i class="menu-icon ti-email"></i>Transparansi </a>
         </li>
+        <li>
+          <a href="{{ route('layanan.index') }}"> <i class="menu-icon ti-email"></i>Layanan Surat</a>
+      </li>
           
         <h3 class="menu-title">Kabar Desa</h3><!-- /.menu-title -->
         <li>

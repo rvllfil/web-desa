@@ -38,6 +38,15 @@
         <li>
           <a href="{{ url('admin/posts') }}"> <i class="menu-icon ti-email"></i>Posts</a>
         </li>
+
+        <h3 class="menu-title">Produk Desa</h3><!-- /.menu-title -->
+        <li>
+          <a href="{{ url('admin/produk') }}"> <i class="menu-icon ti-email"></i>Produk</a>
+        </li>
+        <li>
+          <a href="{{ url('') }}"> <i class="menu-icon ti-email"></i>Pesanan</a>
+        </li>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>

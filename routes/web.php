@@ -53,6 +53,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('home', 'HomeController@index')->name('home');
   Route::resource('admin/transparansi', 'TransparansiController');
   Route::resource('admin/layanan', 'ServiceController');
+  Route::resource('admin/produk', 'ProductController');
 });
 
 

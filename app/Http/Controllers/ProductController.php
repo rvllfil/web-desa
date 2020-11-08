@@ -23,7 +23,8 @@ class ProductController extends Controller
 
     public function display()
     {
-        
+        $products = Barang::paginate(20);
+        return view('products', compact('products'));
     }
 
     /**
@@ -48,6 +49,7 @@ class ProductController extends Controller
             'nama_barang' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
+            'kontak_penjual' => 'required',
             'gambar' => 'required',
         ]);
         $gambar = $request->gambar;
@@ -57,6 +59,7 @@ class ProductController extends Controller
             'nama_barang' => $request->nama_barang,
             'harga' => $request->harga,
             'deskripsi' => $request->deskripsi,
+            'kontak_penjual' => $request->kontak_penjual,
             'gambar' => 'uploads/produk/'.$gambar_baru
         ]);
 
@@ -72,7 +75,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $produk = Barang::where('id', $id)->first();
+        return view('product', compact('produk'));
     }
 
     /**
@@ -99,6 +103,7 @@ class ProductController extends Controller
         $this->validate($request, [
             'nama_barang' => 'required',
             'harga' => 'required',
+            'kontak_penjual' => 'required',
             'deskripsi' => 'required'
         ]);
 
@@ -113,6 +118,7 @@ class ProductController extends Controller
                 'nama_barang' => $request->nama_barang,
                 'harga' => $request->harga,
                 'deskripsi' => $request->deskripsi,
+                'kontak_penjual' => $kontak_penjual,
                 'gambar' => 'uploads/produk/'.$gambar_baru
             ];
             File::delete(public_path($produk->gambar));
@@ -123,6 +129,7 @@ class ProductController extends Controller
                 'nama_barang' => $request->nama_barang,
                 'harga' => $request->harga,
                 'deskripsi' => $request->deskripsi,
+                'kontak_penjual' => $kontak_penjual,
             ];
         }  
 

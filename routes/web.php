@@ -26,7 +26,8 @@ Route::get('pkk', 'PageController@pkk');
 Route::get('karang-taruna', 'PageController@kt');
 
 // Route::get('transparansi', 'PageController@transparansi');
-Route::get('kontak', 'PageController@kontak');
+Route::get('produk-desa', 'ProductController@display');
+Route::get('produk-desa/{id}', 'ProductController@show')->name('products.product');
 
 Route::get('kabar-desa/search', 'PostsController@search' )->name('search.posts');
 Route::get('kabar-desa', 'PostsController@all');

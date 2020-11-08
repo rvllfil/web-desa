@@ -30,6 +30,10 @@
         <textarea class="form-control" name="deskripsi"></textarea>
       </div>
       <div class="form-group">
+        <label>Kontak Penjual</label>
+        <input type="text" class="form-control" name="kontak_penjual">
+      </div>
+      <div class="form-group">
         <label>Gambar</label>
         <input type="file" class="form-control" name="gambar">
       </div>
@@ -37,4 +41,10 @@
     </form>
   </div>
 </div>
+
+
+<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script>
+  CKEDITOR.replace( 'deskripsi' );
+</script>
 @endsection
